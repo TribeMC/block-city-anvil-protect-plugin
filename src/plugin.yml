@@ -1,0 +1,43 @@
+main: v3anvil.main
+version: 1.0
+author: V3lop5
+name: Anvil
+commands:
+  addanvil:
+    description: Fuegt einen Amboss hinzu
+  removeanvil:
+    description: Entfernt einen Amboss
+  listanvil:
+    description: Zeigt alle gesicherten Ambosse
+  restoreanvil:
+    description: Stellt alle gesicherten Ambosse wieder her
+  anvil:
+    description: Default Plugin CMD
+permissions:
+  anvil.add:
+    default: false
+    description: Permission fuer CMD addanvil
+  anvil.remove:
+    default: false
+    description: Permission fuer CMD removeanvil
+  anvil.list:
+    default: false
+    description: Permission fuer CMD listanvil
+  anvil.restore:
+    default: false
+    description: Permission fuer CMD restoreanvil
+  anvil.help:
+    default: false
+    description: Permission fuer PluginHilfe
+  anvil.anvil:
+    default: true
+    description: Permission fuer PluginInfo
+  anvil.*:
+    description: Permission fuer alle Anvil Permissions
+    default: op
+    children:
+      anvil.add: true
+      anvil.remove: true
+      anvil.list: true
+      anvil.help: true
+      anvil.anvil: true
